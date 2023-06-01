@@ -1,0 +1,128 @@
+
+:root{
+    --todoList-blue:rgb(22,163,183);
+    --todoList-red:rgb(220,52,69);
+    --todoList-yellow:rgb(255,192,19);
+    --todoList-green:rgb(65,161,83);
+    --todoList-border: 1px solid rgb(209,211,213);
+}
+a{
+  text-decoration: none;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+input{
+  border: unset;
+  outline: unset;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.todo-list{
+    max-width: 730px;
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+    button{
+        width: 100%;
+        padding: .5rem 1rem;
+        border: unset;
+        outline: unset;
+        background-color: var(--todoList-blue);
+        color: white;
+        border-radius: .25rem;
+        
+        &:hover{
+            opacity: .8;
+            cursor: pointer;
+        }
+    }
+    .input{
+        padding: 1.5rem;
+        border: var(--todoList-border);
+        border-radius: .25rem;
+        .input__input{
+            display: flex;
+            border: var(--todoList-border);
+            border-radius: .25rem;
+            margin-bottom: 1.5rem;
+
+            .input__icon{
+                background-color: var(--todoList-blue);
+                color: white;
+                padding: .5rem ;
+            }
+            input{
+                width: 100%;
+                padding: .5rem 1rem;
+                border: unset;
+                outline: unset;
+
+            }
+        }
+        .input__btn-add{
+            
+        }
+    }
+    .btns{
+        display: flex;
+        gap: 1rem;
+        padding: 1.5rem 0;
+        .btn-active{
+            background-color: var(--todoList-green);
+        }
+    }
+    .todos{
+        .todo{
+            display: flex;
+            justify-content: space-between;
+            padding: .5rem 1.5rem;
+            border: var(--todoList-border);
+            margin-bottom: 1rem;
+            border-radius: 0.25rem;
+            .todo__text-done{
+                text-decoration-line: line-through;
+                text-decoration-color: var(--todoList-red);
+                color: var(--todoList-red);
+            }
+            .todo__action{
+                display: flex;
+                gap: 1rem;
+                button{
+                    padding: unset;
+                    font-size: 1.25rem;
+                    background-color: unset;
+
+                }
+                button.check{
+                    color: var(--todoList-green);
+                }
+                button.edit{
+                    color: var(--todoList-yellow);
+                }
+                button.delete{
+                    color: var(--todoList-red);
+                }
+            }
+        }
+    }
+    .btns-delete{
+        display: flex;
+        gap: 1rem;
+        button{
+            background-color: var(--todoList-red);
+        }
+    }
+}
